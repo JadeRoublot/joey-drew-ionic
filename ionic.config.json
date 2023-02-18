@@ -1,0 +1,7 @@
+{
+  "name": "joey-drew-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
