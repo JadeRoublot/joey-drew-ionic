@@ -23,6 +23,14 @@ const routes: Routes = [
     path: 'secret-list',
     loadChildren: () => import('./secret-list/secret-list.module').then( m => m.SecretListPageModule)
   },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'tab',
+    loadChildren: () => import('./tab/tab.module').then( m => m.TabPageModule)
+  },
 ];
 
 @NgModule({
