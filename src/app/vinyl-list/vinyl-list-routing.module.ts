@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: VinylListPage
+  },
+  {
+    path: 'vinyl',
+    loadChildren: () => import('./vinyl/vinyl.module').then( m => m.VinylPageModule)
+  },
+  {
+    path: 'vinyl-new',
+    loadChildren: () => import('./vinyl-new/vinyl-new.module').then( m => m.VinylNewPageModule)
   }
 ];
 

@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: SecretListPage
+  },
+  {
+    path: 'secret',
+    loadChildren: () => import('./secret/secret.module').then( m => m.SecretPageModule)
   }
 ];
 
