@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: UserPage
-  }
+  },
+  {
+    path: 'secret',
+    loadChildren: () => import('../secret-list/secret-list.module').then( m => m.SecretListPageModule)
+  },
 ];
 
 @NgModule({
