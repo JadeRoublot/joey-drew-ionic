@@ -9,11 +9,11 @@ const routes: Routes = [
     component: VinylListPage
   },
   {
-    path: 'vinyl',
+    path: 'vinyl :id',
     loadChildren: () => import('./vinyl/vinyl.module').then( m => m.VinylPageModule)
   },
   {
-    path: 'vinyl-new',
+    path: 'newVinyl',
     loadChildren: () => import('./vinyl-new/vinyl-new.module').then( m => m.VinylNewPageModule)
   }
 ];

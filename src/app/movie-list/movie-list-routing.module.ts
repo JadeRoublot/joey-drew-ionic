@@ -9,11 +9,11 @@ const routes: Routes = [
     component: MovieListPage
   },
   {
-    path: 'movie-new',
+    path: 'newMovie',
     loadChildren: () => import('./movie-new/movie-new.module').then( m => m.MovieNewPageModule)
   },
   {
-    path: 'movie',
+    path: 'movie :id',
     loadChildren: () => import('./movie/movie.module').then( m => m.MoviePageModule)
   }
 ];
