@@ -1,9 +1,18 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tab/vinyl"></ion-back-button>
+    </ion-buttons>
     <ion-title>vinyl</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-button (click)="modif = !modif"> Rendre Modifiable</ion-button>
+  <div *ngIf = "!modif">
+    J'affiche le details
+  </div>
+  <div *ngIf = "modif">
+    Je peux modifier
+  </div>
 </ion-content>

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vinyl.page.scss'],
 })
 export class VinylPage implements OnInit {
-
+  modif: boolean = false;
   constructor() { }
 
   ngOnInit() {

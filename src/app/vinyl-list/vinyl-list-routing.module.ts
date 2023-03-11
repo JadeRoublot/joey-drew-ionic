@@ -9,13 +9,14 @@ const routes: Routes = [
     component: VinylListPage
   },
   {
-    path: ':id',
-    loadChildren: () => import('./vinyl/vinyl.module').then( m => m.VinylPageModule)
-  },
-  {
     path: 'newVinyl',
     loadChildren: () => import('./vinyl-new/vinyl-new.module').then( m => m.VinylNewPageModule)
+  },
+  {
+    path: ':id',
+    loadChildren: () => import('./vinyl/vinyl.module').then( m => m.VinylPageModule)
   }
+ 
 ];
 
 @NgModule({
