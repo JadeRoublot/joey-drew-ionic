@@ -27,6 +27,26 @@
           <ion-col>
             <strong>Title</strong> <br>
             {{movie.title}}<br>
+            <hr>
+            <strong>Quality</strong> <br>
+            <div *ngIf="movie.nature === true">
+              <p>Original</p>
+            </div>
+            <div *ngIf="movie.nature === false">
+              <p>Reproduction</p>
+            </div>
+            <hr>
+            <strong>Producer</strong> <br>
+            {{movie.productor}}<br>
+            <hr>
+            <strong>Realisator</strong> <br>
+            {{movie.realisator}}<br>
+            <hr>
+            <strong>Date of Release</strong> <br>
+            {{movie.releaseDate}}<br>
+            <hr>
+            <strong>Synopsis</strong> <br>
+            {{movie.synopsis}}<br>
           </ion-col>
         </ion-card>
       </ion-row>
