@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
 import { MovieService } from '../../services/movie.service';
-
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-movie',
   templateUrl: './movie.page.html',
@@ -16,13 +16,15 @@ export class MoviePage implements OnInit {
     private route: ActivatedRoute,
     private Movie: MovieService,
     private toastCtrl: ToastController,
-    private router: Router
+    private router: Router,
+    private sanitizer: DomSanitizer
   ) { }
 
   ngOnInit() {
     this.modif = false;
     const id = this.route.snapshot.paramMap.get('id');
     this.Movie.get(id).subscribe((value: any) => {
+      value.link = this.sanitizer.bypassSecurityTrustResourceUrl(value.link);
       this.movie = value;
     });
   }
