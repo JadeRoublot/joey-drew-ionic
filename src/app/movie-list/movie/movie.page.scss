@@ -15,5 +15,16 @@ ion-card {
     background-size: cover;
     color:black;
     box-shadow: 5px 5px 5px 5px black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
     
 }
+
+hr {
+    border-bottom: 1px solid #000000;
+    margin: 10px 0;
+    width: 90%;
+  }
