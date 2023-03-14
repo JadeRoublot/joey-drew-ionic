@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { VinylService } from '../services/vinyl.service';
 @Component({
   selector: 'app-vinyl-list',
   templateUrl: './vinyl-list.page.html',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VinylListPage implements OnInit {
 
-  constructor() { }
+  constructor(private Vinyl: VinylService) { }
 
+  vinyls!:any;
+  
   ngOnInit() {
+    this.Vinyl.getAllVinyls().subscribe((data: any) => {
+      this.vinyls = data;
+    })
   }
 
 }

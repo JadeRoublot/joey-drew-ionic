@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SecretService } from '../services/secret.service';
 
 @Component({
   selector: 'app-secret-list',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecretListPage implements OnInit {
 
-  constructor() { }
+  constructor(private Secret: SecretService) { }
+
+  secrets!:any;
 
   ngOnInit() {
+    this.Secret.getAllSecrets().subscribe((data: any) => {
+      this.secrets = data;
+    })
   }
 
 }
