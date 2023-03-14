@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/tab/movie"></ion-back-button>
     </ion-buttons>
-    <ion-title>movie</ion-title>
+    <ion-title>Movie</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,15 +12,16 @@
   <div *ngIf = "!modif">
     <ion-grid *ngIf="movie">
       <ion-row>
-        <ion-col>
-          <div  *ngIf="movie.affiche !== 'https://i.pinimg.com/originals/7a/57/c1/7a57c177ee7c2a5e96f44df3f49088b6.png'">
-          
-            J'affiche le details sans youtube
-          </div>
-          <div *ngIf="movie.affiche === 'https://i.pinimg.com/originals/7a/57/c1/7a57c177ee7c2a5e96f44df3f49088b6.png'">
-            J'affiche le details avec youtube
-          </div>
-        </ion-col>
+        <div  *ngIf="movie.affiche !== 'https://i.pinimg.com/originals/7a/57/c1/7a57c177ee7c2a5e96f44df3f49088b6.png'">
+          <ion-col>
+            <img class="affiche" [src]="movie.affiche" alt="image movie">
+          </ion-col>
+        </div>
+        <div *ngIf="movie.affiche === 'https://i.pinimg.com/originals/7a/57/c1/7a57c177ee7c2a5e96f44df3f49088b6.png'">
+          <ion-col>
+            <iframe width="420" height="345"  [src]="movie.link"></iframe>
+          </ion-col>
+        </div>
       </ion-row>
     </ion-grid>
   </div>
