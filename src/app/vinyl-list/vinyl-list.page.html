@@ -7,5 +7,15 @@
 <ion-content>
   <ion-button routerLink="/tab/vinyl/newVinyl">New Vinyl</ion-button>
   <h2> </h2>
-  <img src="/assets/icon/favicon.png" routerLink="/tab/vinyl/test">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" *ngFor="let vinyl of vinyls">
+       <ion-card [routerLink]="['/tab/vinyl/', vinyl.id]">
+        <img src="https://cdn-icons-png.flaticon.com/512/182/182377.png" [alt]="vinyl.title">
+        <h5>{{vinyl.title}}</h5>
+       </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
