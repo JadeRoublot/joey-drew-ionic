@@ -10,9 +10,18 @@
 <ion-content>
   <ion-button (click)="modif = !modif"> Rendre Modifiable</ion-button>
   <div *ngIf = "!modif">
-    J'affiche le details
+    <div *ngIf="movie">
+      <div  *ngIf="movie.affiche !== 'https://i.pinimg.com/originals/7a/57/c1/7a57c177ee7c2a5e96f44df3f49088b6.png'">
+        J'affiche le details sans youtube
+      </div>
+      <div *ngIf="movie.affiche === 'https://i.pinimg.com/originals/7a/57/c1/7a57c177ee7c2a5e96f44df3f49088b6.png'">
+        J'affiche le details avec youtube
+      </div>
+    </div>
   </div>
+
   <div *ngIf = "modif">
     Je peux modifier
   </div>
+
 </ion-content>
