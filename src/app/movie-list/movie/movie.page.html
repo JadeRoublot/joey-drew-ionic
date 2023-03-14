@@ -7,10 +7,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="center">
   <div *ngIf = "!modif">
     <ion-grid *ngIf="movie">
-      <ion-row>
+      <ion-row class="center">
         <div  *ngIf="movie.affiche !== 'https://i.pinimg.com/originals/7a/57/c1/7a57c177ee7c2a5e96f44df3f49088b6.png'">
           <ion-col>
             <img class="affiche" [src]="movie.affiche" alt="image movie">
@@ -22,7 +22,7 @@
           </ion-col>
         </div>
       </ion-row>
-      <ion-row>
+      <ion-row class="center">
         <ion-card>
           <ion-col>
             <strong>Title</strong> <br>
