@@ -8,7 +8,6 @@
 </ion-header>
 
 <ion-content>
-  <ion-button (click)="modif = !modif"> Rendre Modifiable</ion-button>
   <div *ngIf = "!modif">
     <ion-grid *ngIf="movie">
       <ion-row>
@@ -23,11 +22,19 @@
           </ion-col>
         </div>
       </ion-row>
+      <ion-row>
+        <ion-card>
+          <ion-col>
+            <strong>Title</strong> <br>
+            {{movie.title}}<br>
+          </ion-col>
+        </ion-card>
+      </ion-row>
     </ion-grid>
+    
   </div>
-
   <div *ngIf = "modif && movie">
     Je peux modifier
   </div>
-
+  <ion-button (click)="modif = !modif"> Rendre Modifiable</ion-button>
 </ion-content>
