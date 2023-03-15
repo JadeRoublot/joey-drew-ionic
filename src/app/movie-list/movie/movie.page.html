@@ -54,7 +54,59 @@
     
   </div>
   <div *ngIf = "modif && movie">
-    Je peux modifier
+    <ion-row class="center">
+      <ion-card>
+        <ion-col>
+            <ion-item>
+              <ion-label>Title</ion-label>
+              <ion-input type="text" [(ngModel)]="movie.title"></ion-input>
+            </ion-item>
+        <hr>
+            <ion-item>
+              <ion-label>Producer</ion-label>
+              <ion-input type="text" [(ngModel)]="movie.productor"></ion-input>
+            </ion-item>
+        <hr>
+            <ion-item>
+              <ion-label>Realisator</ion-label>
+              <ion-input type="text" [(ngModel)]="movie.realisator"></ion-input>
+            </ion-item>
+        <hr>
+            <ion-item>
+              <ion-label>Music Composer</ion-label>
+              <ion-input type="text" [(ngModel)]="movie.musicComposeur"></ion-input>
+            </ion-item>
+        <hr>
+            <ion-item>
+              <ion-label>Release Date</ion-label>
+              <ion-input type="text" [(ngModel)]="movie.releaseDate"></ion-input>
+            </ion-item>
+        <hr>
+            <ion-item>
+              <ion-label>Cover link</ion-label>
+              <ion-input type="text" [(ngModel)]="movie.affiche"></ion-input>
+            </ion-item>
+        <hr>
+            <ion-item>
+              <ion-label>Movie link</ion-label>
+              <ion-input type="text" [(ngModel)]="movie.link"></ion-input>
+            </ion-item>
+        <hr>
+            <ion-item>
+              <ion-label>Quality</ion-label>
+                <input type="radio" name="Qualiter" class="form-check-input" [value]="true" [(ngModel)]="movie.nature"> <label>Original</label>
+                
+                <input type="radio" name="Qualiter" class="form-check-input" [value]="false" [(ngModel)]="movie.nature" > <label>Reproduction</label>
+              
+            </ion-item>
+        <hr>
+            <ion-item>
+              <ion-label>Synopsis</ion-label>
+              <ion-input type="text" [(ngModel)]="movie.synopsis"></ion-input>
+            </ion-item>
+        </ion-col>
+      </ion-card>
+    </ion-row>
   </div>
   <ion-button (click)="modif = !modif"> Rendre Modifiable</ion-button>
 </ion-content>
