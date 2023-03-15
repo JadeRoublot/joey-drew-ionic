@@ -55,6 +55,33 @@
             <ion-input type="text" [(ngModel)]="vinyl.title"></ion-input>
           </ion-item>
           <hr>
+          <ion-item>
+            <ion-label>Producer : </ion-label> 
+            <ion-input type="text" [(ngModel)]="vinyl.productor"></ion-input>
+          </ion-item>
+          <hr>
+          <ion-item>
+            <ion-label>Release Date : </ion-label> 
+            <ion-input type="text" [(ngModel)]="vinyl.releaseDate"></ion-input>
+          </ion-item>
+          <hr>
+          <ion-item>
+            <ion-label>Movie using this music : </ion-label> 
+            <ion-input type="text" [(ngModel)]="vinyl.movieUsing"></ion-input>
+          </ion-item>
+          <hr>
+          <ion-item>
+            <ion-label>Link of the music : </ion-label> 
+            <ion-input type="text" [(ngModel)]="vinyl.link" disabled=""></ion-input>
+          </ion-item>
+          <hr>
+          <ion-item>
+            <ion-label>Tr / min : </ion-label>
+            &nbsp;<input type="radio" name="Tour" class="form-check-input" [value]="true" [(ngModel)]="vinyl.tour"> <label>33 rpm</label>&nbsp;
+              
+            &nbsp;<input type="radio" name="Tour" class="form-check-input" [value]="false" [(ngModel)]="vinyl.tour" > <label>78 rpm</label>
+            
+          </ion-item>
         </ion-col>
       </ion-card>
     </ion-row>
