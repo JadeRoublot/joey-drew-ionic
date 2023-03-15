@@ -8,11 +8,26 @@
 </ion-header>
 
 <ion-content padding class="background">
-  <ion-button (click)="modif = !modif"> Rendre Modifiable</ion-button>
   <div *ngIf = "!modif">
-    J'affiche le details
+    <ion-grid *ngIf="vinyl">
+      <ion-row class="center">
+        <ion-col>
+          <ion-card>
+            <img src="https://cdn-icons-png.flaticon.com/512/182/182377.png" [alt]="vinyl.title">
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row class="center">
+        <ion-card>
+          <ion-col>
+          J'affiche le details
+          </ion-col>
+        </ion-card>
+        <ion-button (click)="modif = !modif"> Rendre Modifiable</ion-button>
+      </ion-row>
+    </ion-grid>
   </div>
-  <div *ngIf = "modif">
+  <div *ngIf = "modif && vinyl">
     Je peux modifier
   </div>
 </ion-content>
