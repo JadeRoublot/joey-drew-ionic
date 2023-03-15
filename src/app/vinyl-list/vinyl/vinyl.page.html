@@ -50,7 +50,11 @@
     <ion-row class="center">
       <ion-card>
         <ion-col class="item">
-          Je peux modifier
+          <ion-item>
+            <ion-label>Title : </ion-label> 
+            <ion-input type="text" [(ngModel)]="vinyl.title"></ion-input>
+          </ion-item>
+          <hr>
         </ion-col>
       </ion-card>
     </ion-row>

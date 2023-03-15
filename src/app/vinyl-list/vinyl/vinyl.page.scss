@@ -43,6 +43,14 @@ ion-card {
   text-align: center;
   width: 500px;
 }
+ion-col.item {
+  --ion-item-background: transparent;
+  --ion-item-color : black;
+}
+
+ion-label {
+  font-weight: bold;
+}
 
 ion-button {
   --background: black;
