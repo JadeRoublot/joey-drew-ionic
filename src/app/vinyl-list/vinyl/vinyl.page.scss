@@ -3,3 +3,48 @@ ion-content.background{
     background-size: cover;
     color: white;
   }
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+hr {
+  border-bottom: 1px solid #000000;
+  margin: 10px 10px;
+  width: 90%;
+}
+
+.affiche {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+ 
+}
+
+ion-card.afficheCard {
+  width: 370px;
+}
+
+ion-card {
+  background-image: url(https://img.freepik.com/free-photo/vintage-grungy-textured-paper-background_53876-103932.jpg?w=2000);
+  background-size: cover;
+  color:black;
+  box-shadow: 5px 5px 5px 5px black;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  width: 500px;
+}
+
+ion-button {
+  --background: black;
+  font-weight: bold;
+}

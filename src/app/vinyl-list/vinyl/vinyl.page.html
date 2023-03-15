@@ -11,16 +11,18 @@
   <div *ngIf = "!modif">
     <ion-grid *ngIf="vinyl">
       <ion-row class="center">
-        <ion-col>
-          <ion-card>
-            <img src="https://cdn-icons-png.flaticon.com/512/182/182377.png" [alt]="vinyl.title">
+        <ion-col class="center">
+          <ion-card class="afficheCard">
+            <img class="affiche" src="https://cdn-icons-png.flaticon.com/512/182/182377.png" [alt]="vinyl.title">
           </ion-card>
         </ion-col>
       </ion-row>
       <ion-row class="center">
         <ion-card>
           <ion-col>
-          J'affiche le details
+            <strong>Title</strong> <br>
+            <br> {{vinyl.title}}<br>
+            <hr>
           </ion-col>
         </ion-card>
         <ion-button (click)="modif = !modif"> Rendre Modifiable</ion-button>
