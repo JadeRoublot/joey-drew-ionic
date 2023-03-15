@@ -23,6 +23,22 @@
             <strong>Title</strong> <br>
             <br> {{vinyl.title}}<br>
             <hr>
+            <strong>Tr / min </strong> <br>
+            <div *ngIf="vinyl.tour === false">
+              <p>78 rpm</p>
+            </div>
+            <div *ngIf="vinyl.tour === true">
+              <p>33 rpm</p>
+            </div>
+            <hr>
+            <strong>Producer</strong> <br>
+            <br> {{vinyl.productor}}<br>
+            <hr>
+            <strong>Date of Release</strong> <br>
+            <br> {{vinyl.releaseDate}}<br>
+            <hr>
+            <strong>From the Movie</strong> <br>
+            <br> {{vinyl.movieUsing}}<br>
           </ion-col>
         </ion-card>
         <ion-button (click)="modif = !modif"> Rendre Modifiable</ion-button>
