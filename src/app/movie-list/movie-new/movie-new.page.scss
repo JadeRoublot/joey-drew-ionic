@@ -3,3 +3,49 @@ ion-content.background{
     background-size: cover;
     color: white;
   }
+
+  .center{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+ion-card {
+    background-image: url(https://img.freepik.com/free-photo/vintage-grungy-textured-paper-background_53876-103932.jpg?w=2000);
+    background-size: cover;
+    color:black;
+    box-shadow: 5px 5px 5px 5px black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+}
+
+hr {
+    border-bottom: 1px solid #000000;
+    margin: 10px 10px;
+    width: 90%;
+  }
+
+ion-content.background{
+    --background: url(https://static.tumblr.com/cf924c12c6b0fe47a2156c2805bd5516/oefelpi/BZgplgooy/tumblr_static_tumblr_static_bmrcygyaqxkcwgw8ccscgg08g_focused_v3.png);
+    background-size: cover;
+    color: white;
+  }
+
+ion-col.item {
+    --ion-item-background: transparent;
+    --ion-item-color : black;
+}
+
+ion-button {
+    --background: black;
+    font-weight: bold;
+}
+
+ion-label {
+    font-weight: bold;
+}
