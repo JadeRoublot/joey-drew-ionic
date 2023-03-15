@@ -20,7 +20,7 @@ ion-card {
     align-content: center;
     align-items: center;
     text-align: center;
-    
+    width: 500px;
 }
 
 hr {
@@ -34,3 +34,7 @@ ion-content.background{
     background-size: cover;
     color: white;
   }
+
+  ion-col.item {
+    --ion-item-background: transparent;
+}
