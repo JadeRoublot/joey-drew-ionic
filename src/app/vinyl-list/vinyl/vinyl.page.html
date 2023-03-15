@@ -47,6 +47,16 @@
     </ion-grid>
   </div>
   <div *ngIf = "modif && vinyl">
-    Je peux modifier
+    <ion-row class="center">
+      <ion-card>
+        <ion-col class="item">
+          Je peux modifier
+        </ion-col>
+      </ion-card>
+    </ion-row>
+    <div class="center">
+      <ion-button (click)="modif = !modif"> Annuler</ion-button>
+      <ion-button (click)="onModif()"> Modifier</ion-button>
+    </div>
   </div>
 </ion-content>
