@@ -3,6 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/tab/movie"></ion-back-button>
     </ion-buttons>
+
     <ion-title>Movie</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -16,99 +17,130 @@
             <img class="affiche" [src]="movie.affiche" alt="image movie">
           </ion-col>
         </div>
+
         <div *ngIf="movie.affiche === 'https://i.pinimg.com/originals/7a/57/c1/7a57c177ee7c2a5e96f44df3f49088b6.png'">
           <ion-col>
             <iframe width="420" height="345"  [src]="movie.link"></iframe>
           </ion-col>
         </div>
       </ion-row>
+
       <ion-row class="center">
         <ion-card>
           <ion-col>
-            <strong>Title</strong> <br>
-            <br> {{movie.title}}<br>
+            <strong>Title</strong><br>
+            <br> {{movie.title}} <br>
+
             <hr>
-            <strong>Quality</strong> <br>
+
+            <strong>Quality</strong><br>
             <div *ngIf="movie.nature === true">
               <p>Original</p>
             </div>
+            
             <div *ngIf="movie.nature === false">
               <p>Reproduction</p>
             </div>
+
             <hr>
-            <strong>Producer</strong> <br>
-            <br>{{movie.productor}}<br>
+
+            <strong>Producer</strong><br>
+            <br> {{movie.productor}} <br>
+            
             <hr>
-            <strong>Realisator</strong> <br>
-            <br> {{movie.realisator}}<br>
+
+            <strong>Realisator</strong><br>
+            <br> {{movie.realisator}} <br>
+
             <hr>
-            <strong>Date of Release</strong> <br>
-            <br>{{movie.releaseDate}}<br>
+
+            <strong>Date of Release</strong><br>
+            <br> {{movie.releaseDate}} <br>
+
             <hr>
-            <strong>Synopsis</strong> <br>
-            <br>{{movie.synopsis}}<br><br>
+
+            <strong>Synopsis</strong><br>
+            <br> {{movie.synopsis}} <br><br>
           </ion-col>
         </ion-card>
+
         <ion-button (click)="modif = !modif"> Rendre Modifiable</ion-button>
         <ion-button (click)="onDelete(movie.id)">Delete</ion-button>
       </ion-row>
     </ion-grid>
-    
   </div>
+
   <div *ngIf = "modif && movie">
     <ion-row class="center">
       <ion-card>
         <ion-col class="item">
-            <ion-item>
-              <ion-label>Title : </ion-label> 
-              <ion-input type="text" [(ngModel)]="movie.title"></ion-input>
-            </ion-item>
-        <hr>
-            <ion-item>
-              <ion-label>Producer : </ion-label>
-              <ion-input type="text" [(ngModel)]="movie.productor"></ion-input>
-            </ion-item>
-        <hr>
-            <ion-item>
-              <ion-label>Realisator : </ion-label>
-              <ion-input type="text" [(ngModel)]="movie.realisator"></ion-input>
-            </ion-item>
-        <hr>
-            <ion-item>
-              <ion-label>Music Composer : </ion-label>
-              <ion-input type="text" [(ngModel)]="movie.musicComposeur"></ion-input>
-            </ion-item>
-        <hr>
-            <ion-item>
-              <ion-label>Release Date : </ion-label>
-              <ion-input type="text" [(ngModel)]="movie.releaseDate"></ion-input>
-            </ion-item>
-        <hr>
-            <ion-item>
-              <ion-label>Cover link : </ion-label>
-              <ion-input type="text" [(ngModel)]="movie.affiche"></ion-input>
-            </ion-item>
-        <hr>
-            <ion-item>
-              <ion-label>Movie link : </ion-label>
-              <ion-input type="text" [(ngModel)]="movie.link"></ion-input>
-            </ion-item>
-        <hr>
-            <ion-item>
-              <ion-label>Quality : </ion-label>
-              &nbsp;<input type="radio" name="Qualiter" class="form-check-input" [value]="true" [(ngModel)]="movie.nature"> <label>Original</label>&nbsp;
+          <ion-item>
+            <ion-label>Title : </ion-label> 
+            <ion-input type="text" [(ngModel)]="movie.title"></ion-input>
+          </ion-item>
+
+          <hr>
+
+          <ion-item>
+            <ion-label>Producer : </ion-label>
+            <ion-input type="text" [(ngModel)]="movie.productor"></ion-input>
+          </ion-item>
+
+          <hr>
+
+          <ion-item>
+            <ion-label>Realisator : </ion-label>
+            <ion-input type="text" [(ngModel)]="movie.realisator"></ion-input>
+          </ion-item>
+          
+          <hr>
+
+          <ion-item>
+            <ion-label>Music Composer : </ion-label>
+            <ion-input type="text" [(ngModel)]="movie.musicComposeur"></ion-input>
+          </ion-item>
+
+          <hr>
+
+          <ion-item>
+            <ion-label>Release Date : </ion-label>
+            <ion-input type="text" [(ngModel)]="movie.releaseDate"></ion-input>
+          </ion-item>
+
+          <hr>
+
+          <ion-item>
+            <ion-label>Cover link : </ion-label>
+            <ion-input type="text" [(ngModel)]="movie.affiche"></ion-input>
+          </ion-item>
+
+          <hr>
+
+          <ion-item>
+            <ion-label>Movie link : </ion-label>
+            <ion-input type="text" [(ngModel)]="movie.link"></ion-input>
+          </ion-item>
+
+          <hr>
+
+          <ion-item>
+            <ion-label>Quality : </ion-label>
+
+            &nbsp;<input type="radio" name="Qualiter" class="form-check-input" [value]="true" [(ngModel)]="movie.nature"> <label>Original</label>&nbsp;
                 
-              &nbsp;<input type="radio" name="Qualiter" class="form-check-input" [value]="false" [(ngModel)]="movie.nature" > <label>Reproduction</label>
-              
-            </ion-item>
-        <hr>
-            <ion-item>
-              <ion-label>Synopsis : </ion-label>
-              <ion-input type="text" [(ngModel)]="movie.synopsis"></ion-input>
-            </ion-item>
+            &nbsp;<input type="radio" name="Qualiter" class="form-check-input" [value]="false" [(ngModel)]="movie.nature" > <label>Reproduction</label>
+          </ion-item>
+
+          <hr>
+
+          <ion-item>
+            <ion-label>Synopsis : </ion-label>
+            <ion-input type="text" [(ngModel)]="movie.synopsis"></ion-input>
+          </ion-item>
         </ion-col>
       </ion-card>
     </ion-row>
+    
     <div class="center">
       <ion-button (click)="modif = !modif"> Annuler</ion-button>
       <ion-button (click)="onModif()"> Modifier</ion-button>

@@ -3,6 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/tab/vinyl"></ion-back-button>
     </ion-buttons>
+
     <ion-title>vinyl</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -17,35 +18,46 @@
           </ion-card>
         </ion-col>
       </ion-row>
+
       <ion-row class="center">
         <ion-card>
           <ion-col>
-            <strong>Title</strong> <br>
-            <br> {{vinyl.title}}<br>
+            <strong>Title</strong><br>
+            <br> {{vinyl.title}} <br>
+
             <hr>
-            <strong>Tr / min </strong> <br>
+
+            <strong>Tr / min </strong><br>
             <div *ngIf="vinyl.tour === false">
               <p>78 rpm</p>
             </div>
             <div *ngIf="vinyl.tour === true">
               <p>33 rpm</p>
             </div>
+
             <hr>
-            <strong>Producer</strong> <br>
-            <br> {{vinyl.productor}}<br>
+
+            <strong>Producer</strong><br>
+            <br> {{vinyl.productor}} <br>
+
             <hr>
-            <strong>Date of Release</strong> <br>
-            <br> {{vinyl.releaseDate}}<br>
+
+            <strong>Date of Release</strong><br>
+            <br> {{vinyl.releaseDate}} <br>
+
             <hr>
-            <strong>From the Movie</strong> <br>
-            <br> {{vinyl.movieUsing}}<br>
+
+            <strong>From the Movie</strong><br>
+            <br> {{vinyl.movieUsing}} <br>
           </ion-col>
         </ion-card>
+
         <ion-button (click)="modif = !modif"> Rendre Modifiable</ion-button>
         <ion-button (click)="onDelete(vinyl.id)">Delete</ion-button>
       </ion-row>
     </ion-grid>
   </div>
+
   <div *ngIf = "modif && vinyl">
     <ion-row class="center">
       <ion-card>
@@ -54,37 +66,47 @@
             <ion-label>Title : </ion-label> 
             <ion-input type="text" [(ngModel)]="vinyl.title"></ion-input>
           </ion-item>
+
           <hr>
+
           <ion-item>
             <ion-label>Producer : </ion-label> 
             <ion-input type="text" [(ngModel)]="vinyl.productor"></ion-input>
           </ion-item>
+
           <hr>
+
           <ion-item>
             <ion-label>Release Date : </ion-label> 
             <ion-input type="text" [(ngModel)]="vinyl.releaseDate"></ion-input>
           </ion-item>
+
           <hr>
+
           <ion-item>
             <ion-label>Movie using this music : </ion-label> 
             <ion-input type="text" [(ngModel)]="vinyl.movieUsing"></ion-input>
           </ion-item>
+
           <hr>
+
           <ion-item>
             <ion-label>Link of the music : </ion-label> 
             <ion-input type="text" [(ngModel)]="vinyl.link" disabled=""></ion-input>
           </ion-item>
+
           <hr>
+
           <ion-item>
             <ion-label>Tr / min : </ion-label>
             &nbsp;<input type="radio" name="Tour" class="form-check-input" [value]="true" [(ngModel)]="vinyl.tour"> <label>33 rpm</label>&nbsp;
               
             &nbsp;<input type="radio" name="Tour" class="form-check-input" [value]="false" [(ngModel)]="vinyl.tour" > <label>78 rpm</label>
-            
           </ion-item>
         </ion-col>
       </ion-card>
     </ion-row>
+    
     <div class="center">
       <ion-button (click)="modif = !modif"> Annuler</ion-button>
       <ion-button (click)="onModif()"> Modifier</ion-button>
